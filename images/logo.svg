@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="524" viewBox="0 0 500 524">
+  <g id="Group_61" data-name="Group 61" transform="translate(-695 -265)">
+    <g id="Group_60" data-name="Group 60">
+      <g id="Group_62" data-name="Group 62">
+        <g id="Group_59" data-name="Group 59" transform="translate(274 -120)">
+          <g id="Group_58" data-name="Group 58" transform="translate(422 397)">
+            <text id="F" transform="translate(100 359)" fill="#00efd7" font-size="372" font-family="GoogleSans-Regular, Google Sans" letter-spacing="0.034em"><tspan x="0" y="0">F</tspan></text>
+            <text id="F-2" data-name="F" transform="translate(236 412)" fill="#66efaf" font-size="351" font-family="GoogleSans-Regular, Google Sans" letter-spacing="0.034em"><tspan x="0" y="0">F</tspan></text>
+            <g id="Ellipse_31" data-name="Ellipse 31" transform="translate(-1 -12)" fill="none" stroke="#1cdede" stroke-width="10">
+              <ellipse cx="250" cy="245" rx="250" ry="245" stroke="none"/>
+              <ellipse cx="250" cy="245" rx="245" ry="240" fill="none"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
