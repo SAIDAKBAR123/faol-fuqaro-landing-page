@@ -28,13 +28,13 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	
+	<script src="./js/vue.js"></script>
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
-    
-    <!-- Preloader -->
+    <div id="app">
+          <!-- Preloader -->
 	<div class="spinner-wrapper">
         <div class="spinner">
             <div class="bounce1"></div>
@@ -63,7 +63,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">ASOSIY<span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll" href="#header">Asosiy<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#statistics" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">STATISTIKA</a>
@@ -117,42 +117,73 @@
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->
     <!-- end of header -->
-    
-    <!-- Statistics -->
-    <div class="counter" id="statistics">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Counter -->
-                    <div id="counter">
-                        <div class="cell">
-                            <div class="counter-value number-count" data-count="231">1</div>
-                            <p class="counter-info">Muammolar</p>
+        <!-- Statistics -->
+        <div class="counter" id="statistics">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <!-- Counter -->
+                        <div id="counter">
+                            <div class="cell">
+                                <div class="counter-value number-count" data-count="231">1</div>
+                                <p class="counter-info">Muammolar</p>
+                            </div>
+                            <div class="cell">
+                                <div class="counter-value number-count" data-count="85">1</div>
+                                <p class="counter-info">Ko'rib chiqilgan</p>
+                            </div>
+                            <div class="cell">
+                                <div class="counter-value number-count" data-count="59">1</div>
+                                <p class="counter-info">Hal etilgan</p>
+                            </div>
+                            <div class="cell">
+                                <div class="counter-value number-count" data-count="127">1</div>
+                                <p class="counter-info">Rad etilgan</p>
+                            </div>
                         </div>
-                        <div class="cell">
-                            <div class="counter-value number-count" data-count="85">1</div>
-                            <p class="counter-info">Ko'rib chiqilgan</p>
-                        </div>
-                        <div class="cell">
-                            <div class="counter-value number-count" data-count="59">1</div>
-                            <p class="counter-info">Hal etilgan</p>
-                        </div>
-                        <div class="cell">
-                            <div class="counter-value number-count" data-count="127">1</div>
-                            <p class="counter-info">Rad etilgan</p>
-                        </div>
-                    </div>
-                    <!-- end of counter -->
-                    
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of counter -->
-    <!-- end of statistics -->
+                        <!-- end of counter -->
+                        
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of counter -->
+        <!-- end of statistics -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <!-- <div class="carousel-item active">
+                <img style="object-fit:cover; max-height:50%" height="500px" src="https://storage.kun.uz/source/6/NN2PyIyv9hnMvT3TW6fbQYIMTkVHIQp6.jpg" class="d-block w-100" alt="item.image">
+                <div class="carousel-caption d-none d-md-block img_slider_bck">
+                  <h5>asda</h5>
+                  <p>asdas</p>
+                </div>
+              </div> -->
+          <div :class="i == 0 ? 'carousel-item active':'carousel-item'" v-for="(item, i) in news" :key="i">
+            <img style="object-fit:cover; max-height:50%" height="500px" :src="item.image" class="d-block w-100" :alt="item.image">
+            <div class="carousel-caption  img_slider_bck">
+              <h3>{{item.title}}</h3>
+              <p>{{item.body}}</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
-    <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3Adcb0f9844617520d786f026179e9d848cc2dbe20b39a70d7449059191f4c09bd&amp;source=constructor"
-    width="100%" height="636" frameborder="0" onmousewheel="true" onscroll="false"></iframe>
+    <!-- <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3Adcb0f9844617520d786f026179e9d848cc2dbe20b39a70d7449059191f4c09bd&amp;source=constructor"
+    width="100%" height="636" frameborder="0" onmousewheel="true" onscroll="false"></iframe> -->
    
     <!-- Features -->
     <div id="features" class="tabs">
@@ -462,9 +493,10 @@
         </div> <!-- end of container -->
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
-    
+</div>
     	
     <!-- Scripts -->
+    <script src="js/MainVue.js"></script>
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
