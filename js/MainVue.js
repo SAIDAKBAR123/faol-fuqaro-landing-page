@@ -1,5 +1,39 @@
-var app = new Vue({
+const i18n = new VueI18n({
+    locale: localStorage.getItem('lang') || 'ru',
+    falbacklocale: 'uz',
+    messages: {
+      'uz': {
+        h_main: 'ASOSIY',
+        h_statistics: 'STATISTIKA',
+        h_instruction: 'QO\'LLANMA',
+        h_usage: 'ILOVA HAQIDA',
+        h_contacts: 'BIZ BILAN ALOQA',
+        section_1: {
+            start: 'FAOL FUQARO',
+            middle: 'SHIKOYAT, MUAMMO, ARIZA',
+            end: 'UCHUN YECHIM',
+            subtitle: "Bizning ilovaga qo'shiling va yurtimiz rivojiga hissa qo'shing!"
+        }
+      },
+      'ru': {
+        h_main: 'ГЛАВНЫЙ',
+        h_statistics: 'СТАТИСТИКА',
+        h_instruction: 'ИНСТРУКЦИЯ',
+        h_usage: 'О ПРИМЕНЕНИИ',
+        h_contacts: 'СВЯЗАТЬСЯ С НАМИ',
+        section_1: {
+            start: 'FAOL FUQARO',
+            middle: 'ЖАЛОБА, ПРОБЛЕМА, ЗАЯВКА',
+            end: 'РЕШЕНИЯ',
+            subtitle: "Присоединяйтесь к нашему приложению и внесите свой вклад в развитие нашей страны!"
+        }
+      }
+      // ...
+    }
+  })
+const app = new Vue({
     el: '#app',
+    i18n,
     data: {
         message: 'Hello Vue!',
         news: [
@@ -28,5 +62,14 @@ var app = new Vue({
                 path: ''
             }
         ]
+    },
+    methods: {
+        setLocale( lang ) {
+            location.reload()
+            setTimeout(() => {
+            localStorage.setItem('lang', lang)
+            this.$i18n.locale= lang
+            }, 1000);
+        }
     }
 })
