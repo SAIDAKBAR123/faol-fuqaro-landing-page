@@ -65,11 +65,16 @@ const app = new Vue({
     },
     methods: {
         setLocale( lang ) {
+            localStorage.setItem('lang', lang)
             location.reload()
             setTimeout(() => {
-            localStorage.setItem('lang', lang)
-            this.$i18n.locale= lang
-            }, 1000);
+                this.$i18n.locale= lang
+            }, 500);
+            // setTimeout(() => {
+            // localStorage.setItem('lang', lang)
+            // this.$i18n.locale= lang
+            // alert('asdads')
+            // }, 1000)
         }
     }
 })
