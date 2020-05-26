@@ -13,6 +13,61 @@ const i18n = new VueI18n({
             middle: 'SHIKOYAT, MUAMMO, ARIZA',
             end: 'UCHUN YECHIM',
             subtitle: "Bizning ilovaga qo'shiling va yurtimiz rivojiga hissa qo'shing!"
+        },
+        section_2: {
+            problem: 'Muammolar',
+            reviewed: "Ko'rib chiqilgan",
+            solved: "Hal etilgan",
+            rejected: "Rad etilgan"
+        },
+        section_3: {
+            header: {
+                title: 'AFZALLIKLARI',
+                subtitle: 'Nega aynan Faol fuqaro ilovasi ? Uning boshqa ilovalardan ustunlik taraflari',
+                subheader: 'OSON KIRISH'
+            },
+            solutions: {
+                sn_1: 'Muammoning tezkor yechimi',
+                sn_2: "Mutasaddi tashkilotlar bilan to'g'ridan to'g'ri muloqot",
+                sn_3: "Muammolar yechilishi ustidan online nazorat",
+                sn_4: "Yon atrofga befarq bo'lmaslik",
+                sn_5: "Murojaatlarni yetqazish uchun qulay tizim",
+                sn_6: "Umumiy statistika grafigi",
+
+            }
+        },
+        section_4: {
+           inst_1: {
+               header: 'Muammoni suratga oling!',
+               subheader: "Tizim orqali sizning sorovingiz qabul qilingani yoki ishlash jarayonida ekanligi togrisida nazorat o'rnating va shu orqali davlatimizdagi nohush xolatlarni oldini oling",
+               btn: "Ko'rsatma"
+           },
+           inst_2: {
+            header: 'Rasmga olingan fotoga izoh qoldiring.',
+            subheader: "Muammo yoki hodisani rasmga oling va izoh qoldiring.",
+            btn: "Ko'rsatma"
+           },
+           inst_3: {
+            header: 'Natijalarni kuzatib boring',
+            subheader: "Tizim orqali sizning sorovingiz qabul qilingani yoki ishlash jarayonida ekanligi togrisida nazorat o'rnating va shu orqali davlatimizdagi nohush xolatlarni oldini oling",
+            btn: "Ko'rsatma"
+            }
+        },
+        section_5: {
+            title: 'BIZ BILAN ALOQA',
+            subtitle: "Biz bilan aloqa uchun quyidagi ma'lumotlardan foydalanishingiz mumkin",
+            address: "9, Ziyolilar ko'chasi, M.Ulug'bek Tumani, Tashkent shahri, 100107",
+            mailForm: {
+                name: 'ISM',
+                email: 'MAIL ADDRESS',
+                message: "Habaringiz",
+                sendBtn: "Jo'natish"
+            }
+        },
+        section_6: {
+            about: "Tashkilot haqida",
+            description: "Tashkilot haqida qo'shimcha ma'lumotlarni quydagi raqamlar orqali qo'ng'iroq qilib bilishingiz mumkin",
+            copyright: "Barcha huquqlar himoyalangan"
         }
       },
       'ru': {
@@ -35,6 +90,12 @@ const app = new Vue({
     el: '#app',
     i18n,
     data: {
+        report: {
+            all: '',
+            closed: '',
+            rejected: '',
+            reviewed: ''
+        },
         message: 'Hello Vue!',
         news: [
             {
@@ -76,5 +137,12 @@ const app = new Vue({
             // alert('asdads')
             // }, 1000)
         }
+    },
+    created() {
+        fetch('https://server.sunbet.uz/api/counts')
+        .then(response => response.json())
+         .then(data => {
+             this.report = data
+         });
     }
 })

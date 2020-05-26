@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Faol fuqaro loyihasi. Ilovani yuklab oling va yurtimiz ravnaqi uchun o'z hissangizni qo'shing!">
-    <meta name="author" content="ITsolutions>
+    <meta name="author" content="ITsolutions">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -136,19 +136,19 @@
                         <!-- Counter -->
                         <div id="counter">
                             <div class="cell">
-                                <div class="counter-value number-count" data-count="231">1</div>
+                                <div class="counter-value number-count" v-bind:data-count="report.all">1</div>
                                 <p class="counter-info">Muammolar</p>
                             </div>
                             <div class="cell">
-                                <div class="counter-value number-count" data-count="85">1</div>
+                                <div class="counter-value number-count"v-bind:data-count="report.reviewed">1</div>
                                 <p class="counter-info">Ko'rib chiqilgan</p>
                             </div>
                             <div class="cell">
-                                <div class="counter-value number-count" data-count="59">1</div>
+                                <div class="counter-value number-count" v-bind:data-count="report.closed">1</div>
                                 <p class="counter-info">Hal etilgan</p>
                             </div>
                             <div class="cell">
-                                <div class="counter-value number-count" data-count="127">1</div>
+                                <div class="counter-value number-count" v-bind:data-count="report.rejected">1</div>
                                 <p class="counter-info">Rad etilgan</p>
                             </div>
                         </div>
