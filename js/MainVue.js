@@ -124,7 +124,7 @@ const app = new Vue({
             console.log(err)
         })
 
-         fetch(`http://api.sunbet.uz/api/posts/public?lang=${this.lang }`)
+         fetch(`http://ffapi.sunbet.uz/api/posts/public?lang=${this.lang }`)
         .then(response => response.json())
          .then(data => {
              console.log(data)
