@@ -23,7 +23,7 @@ const i18n = new VueI18n({
         section_3: {
             header: {
                 title: 'AFZALLIKLARI',
-                subtitle: 'Nega aynan Faol fuqaro ilovasi ? Uning boshqa ilovalardan ustunlik taraflari',
+                subtitle: 'Nega aynan Faol fuqaro ilovasi ?',
                 subheader: 'OSON KIRISH'
             },
             solutions: {
@@ -32,7 +32,7 @@ const i18n = new VueI18n({
                 sn_3: "Muammolar yechilishi ustidan online nazorat",
                 sn_4: "Yon atrofga befarq bo'lmaslik",
                 sn_5: "Murojaatlarni yetqazish uchun qulay tizim",
-                sn_6: "Umumiy statistika grafigi",
+                sn_6: "Turli xil statistika",
 
             }
         },
