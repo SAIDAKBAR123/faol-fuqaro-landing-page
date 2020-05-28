@@ -137,19 +137,19 @@
                         <div id="counter">
                             <div class="cell">
                                 <div class="counter-value number-count" v-bind:data-count="report.all">1</div>
-                                <p class="counter-info">Muammolar</p>
+                                <p class="counter-info">{{$t('section_2.problem')}}</p>
                             </div>
                             <div class="cell">
                                 <div class="counter-value number-count"v-bind:data-count="report.reviewed">1</div>
-                                <p class="counter-info">Ko'rib chiqilgan</p>
+                                <p class="counter-info">{{$t('section_2.reviewed')}}</p>
                             </div>
                             <div class="cell">
                                 <div class="counter-value number-count" v-bind:data-count="report.closed">1</div>
-                                <p class="counter-info">Hal etilgan</p>
+                                <p class="counter-info">{{$t('section_2.solved')}}</p>
                             </div>
                             <div class="cell">
                                 <div class="counter-value number-count" v-bind:data-count="report.rejected">1</div>
-                                <p class="counter-info">Rad etilgan</p>
+                                <p class="counter-info">{{$t('section_2.rejected')}}</p>
                             </div>
                         </div>
                         <!-- end of counter -->
@@ -200,8 +200,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>AFZALLIKLARI</h2>
-                    <div class="p-heading p-large">Nega aynan Faol fuqaro ilovasi ? Uning boshqa ilovalardan ustunlik taraflari</div>
+                    <h2>{{$t('section_3.header.title')}}</h2>
+                    <div class="p-heading p-large">{{$t('section_3.header.subtitle')}}</div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -209,7 +209,7 @@
                 <!-- Tabs Links -->
                 <ul class="nav nav-tabs" id="lenoTabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-cog"></i>OSON KIRISH</a>
+                        <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-cog"></i>{{$t('section_3.header.subheader')}}</a>
                     </li>
                 </ul>
                 <!-- end of tabs links -->
@@ -227,7 +227,7 @@
                                     <div class="card left-pane first">
                                         <div class="card-body">
                                             <div class="text-wrapper">
-                                                <h4 class="card-title">Muammoning tezkor yechimi</h4>                                            </div>
+                                                <h4 class="card-title">{{$t('section_3.solutions.sn_1')}}</h4>                                            </div>
                                             <div class="card-icon">
                                                 <i class="far fa-compass"></i>
                                             </div>
@@ -236,7 +236,7 @@
                                     <div class="card left-pane">
                                         <div class="card-body">
                                             <div class="text-wrapper">
-                                                <h4 class="card-title">Mutasaddi tashkilotlar bilan to'g'ridan to'g'ri muloqot</h4>                                            </div>
+                                                <h4 class="card-title">{{$t('section_3.solutions.sn_2')}}</h4>                                            </div>
                                             <div class="card-icon">
                                                 <i class="far fa-file-code"></i>
                                             </div>
@@ -245,7 +245,7 @@
                                     <div class="card left-pane">
                                         <div class="card-body">
                                             <div class="text-wrapper">
-                                                <h4 class="card-title">Muammolar yechilishi ustidan online nazorat</h4>                                            </div>
+                                                <h4 class="card-title">{{$t('section_3.solutions.sn_3')}}</h4>                                            </div>
                                             <div class="card-icon">
                                                 <i class="far fa-gem"></i>
                                             </div>
@@ -268,7 +268,7 @@
                                                 <i class="far fa-calendar-check"></i>
                                             </div>
                                             <div class="text-wrapper">
-                                                <h4 class="card-title">Yon atrofga befarq bo'lmaslik</h4>                                            </div>
+                                                <h4 class="card-title">{{$t('section_3.solutions.sn_4')}}</h4>                                            </div>
                                         </div>
                                     </div>
                                     <div class="card right-pane">
@@ -277,7 +277,7 @@
                                                 <i class="far fa-bookmark"></i>
                                             </div>
                                             <div class="text-wrapper">
-                                                <h4 class="card-title">Murojaatlarni yetqazish uchun qulay tizim</h4>                                            </div>
+                                                <h4 class="card-title">{{$t('section_3.solutions.sn_5')}}</h4>                                            </div>
                                         </div>
                                     </div>
                                     <div class="card right-pane">
@@ -286,7 +286,7 @@
                                                 <i class="fas fa-cube"></i>
                                             </div>
                                             <div class="text-wrapper">
-                                                <h4 class="card-title">Umumiy statistika grafigi</h4>
+                                                <h4 class="card-title">{{$t('section_3.solutions.sn_6')}}</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -317,9 +317,9 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h3>1. Muammoni suratga oling!</h3>
-                        <p>Suratga olish funksiyasi bilan Tashkilot ma'sullariga o'z murojaatingizni ko'rsating.</p>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#">Ko'rsatma</a>
+                        <h3>1. {{$t('section_4.inst_1.header')}}</h3>
+                        <p>{{$t('section_4.inst_1.subheader')}}</p>
+                        <a class="btn-solid-reg popup-with-move-anim" href="#">{{$t('section_4.inst_1.btn')}}</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -335,9 +335,9 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h3>2. Rasmga olingan fotoga izoh qoldiring.</h3>
-                            <p>Muammo yoki hodisani rasmga oling va izoh qoldiring.</p>
-                            <a class="btn-solid-reg popup-with-move-anim" href="#">Ko'rsatma</a>
+                            <h3>2. {{$t('section_4.inst_2.header')}}</h3>
+                            <p>{{$t('section_4.inst_2.subheader')}}</p>
+                            <a class="btn-solid-reg popup-with-move-anim" href="#">{{$t('section_4.inst_2.btn')}}</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
@@ -357,9 +357,9 @@
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h3>3. Natijalarni kuzatib boring.</h3>
-                            <p>Tizim orqali sizning sorovingiz qabul qilingani yoki ishlash jarayonida ekanligi togrisida nazorat o'rnating va shu orqali davlatimizdagi nohush xolatlarni oldini oling</p>
-                            <a class="btn-solid-reg popup-with-move-anim" href="#">Ko'rsatma</a>
+                            <h3>3. {{$t('section_4.inst_3.header')}}</h3>
+                            <p>{{$t('section_4.inst_3.subheader')}}</p>
+                            <a class="btn-solid-reg popup-with-move-anim" href="#">{{$t('section_4.inst_3.btn')}}</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
         
@@ -429,10 +429,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>BIZ BILAN ALOQA</h2>
+                    <h2>{{$t('section_5.title')}}</h2>
                     <ul class="list-unstyled li-space-lg">
-                        <li class="address">Biz bilan aloqa uchun quyidagi ma'lumotlardan foydalanishingiz mumkin</li>
-                        <li><a href="https://goo.gl/maps/GuwhHGfcrUpmD9UH6" target="_blank"><i class="fas fa-map-marker-alt"></i>9, Ziyolilar ko'chasi, M.Ulug'bek Tumani, Tashkent shahri, 100107</a></li>
+                        <li class="address">{{$t('section_5.subtitle')}}</li>
+                        <li><a href="https://goo.gl/maps/GuwhHGfcrUpmD9UH6" target="_blank"><i class="fas fa-map-marker-alt"></i>{{$t('section_5.address')}}</a></li>
                         <li><i class="fas fa-phone"></i><a class="blue" href="tel:++998712899999">+998 71 289-99-99</a></li>
                         <li><i class="fas fa-envelope"></i><a class="blue" href="mailto:info@inha.uz">info@inha.uz</a></li>
                     </ul>
@@ -444,17 +444,17 @@
                     <form id="contactForm" data-toggle="validator" data-focus="false">
                         <div class="form-group">
                             <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Ism</label>
+                            <label class="label-control" for="cname">{{$t('section_5.mailForm.name')}}</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
+                            <label class="label-control" for="cemail">{{$t('section_5.mailForm.email')}}</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Habaringiz</label>
+                            <label class="label-control" for="cmessage">{{$t('section_5.mailForm.message')}}</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <!-- <div class="form-group checkbox">
@@ -462,7 +462,7 @@
                             <div class="help-block with-errors"></div>
                         </div> -->
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">Jo'natish</button>
+                            <button type="submit" class="form-control-submit-button">{{$t('section_5.mailForm.sendBtn')}}</button>
                         </div>
                         <div class="form-message">
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
@@ -483,8 +483,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col">
-                        <h4>Tashkilot haqida</h4>
-                        <p>Tashkilot haqida qo'shimcha ma'lumotlarni quydagi raqamlar orqali qo'ng'iroq qilib bilishingiz mumkin</p>
+                        <h4>{{$t('section_6.about')}}</h4>
+                        <p>{{$t('section_6.description')}}</p>
                     </div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -497,7 +497,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="http://itsolutions.uz/">IT SOLUTIONS</a> - Barcha huquqlar himoyalangan</p>
+                    <p class="p-small">Copyright © 2020 <a href="http://itsolutions.uz/">IT SOLUTIONS</a> - {{$t('section_6.copyright')}}</p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
