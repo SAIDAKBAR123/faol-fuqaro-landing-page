@@ -10,7 +10,7 @@ const i18n = new VueI18n({
         h_contacts: 'BIZ BILAN ALOQA',
         section_1: {
             start: 'FAOL FUQARO',
-            middle: 'SHIKOYAT, MUAMMO, ARIZA',
+            middle: 'TAKLIF, MUAMMO, MUAMMO',
             end: 'UCHUN YECHIM',
             subtitle: "Bizning ilovaga qo'shiling va yurtimiz rivojiga hissa qo'shing!"
         },
