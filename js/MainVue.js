@@ -56,7 +56,7 @@ const i18n = new VueI18n({
         section_5: {
             title: 'BIZ BILAN ALOQA',
             subtitle: "Biz bilan aloqa uchun quyidagi ma'lumotlardan foydalanishingiz mumkin",
-            address: "9, Ziyolilar ko'chasi, M.Ulug'bek Tumani, Tashkent shahri, 100107",
+            address: "O'zbekiston, 100052, Toshkent, MIRZO-ULUG'BEK TUMANI, xiyobon MUSTAQILLIK, 122",
             mailForm: {
                 name: 'ISM',
                 email: 'MAIL ADDRESS',
@@ -123,7 +123,7 @@ const i18n = new VueI18n({
         "section_5": {
           "title": "СВЯЖИТЕСЬ С НАМИ",
           "subtitle": "По вопросам сотрудничества или пожеланий обращайтесь по нижеуказанному адресу",
-          "address": "9, Ziyolilar ko'chasi, M.Ulug'bek Tumani, Tashkent shahri, 100107",
+          "address": "O'zbekiston, 100052, Toshkent, MIRZO-ULUG'BEK TUMANI, xiyobon MUSTAQILLIK, 122",
           "mailForm": {
             "name": "ФИО",
             "email": "E-MAIL адрес",
@@ -170,15 +170,16 @@ const app = new Vue({
     },
     created() {
 
-        fetch('https://server.sunbet.uz/api/counts')
+        fetch('https://server.faolfuqaro.uz/api/stats/requests')
         .then(response => response.json())
          .then(data => {
+           console.log(data)
              this.report = data
          }).catch( err => {
             console.log(err)
         })
 
-         fetch(`http://ffapi.sunbet.uz/api/posts/public?lang=${this.lang }`)
+         fetch(`https://server.faolfuqaro.uz/api/posts/public?lang=${this.lang}&page=1&size=4`)
         .then(response => response.json())
          .then(data => {
              console.log(data)
