@@ -66,7 +66,7 @@ const i18n = new VueI18n({
         },
         section_6: {
             about: "Tashkilot haqida",
-            description: "Tashkilot haqida qo'shimcha ma'lumotlarni quydagi raqamlar orqali qo'ng'iroq qilib bilishingiz mumkin",
+            description: "Tashkilot haqida qo'shimcha ma'lumotlarni quyidagi raqamlar orqali qo'ng'iroq qilib bilishingiz mumkin",
             copyright: "Barcha huquqlar himoyalangan"
         }
       },
